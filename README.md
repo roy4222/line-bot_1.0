@@ -6,14 +6,16 @@
 
 ### 操作展示影片
 
-[![操作展示影片](https://img.youtube.com/vi/tNygDdxRWoA/maxresdefault.jpg)](https://www.youtube.com/watch?v=tNygDdxRWoA)
+<div align="center">
+  
+[![操作展示影片](https://i3.ytimg.com/vi/tNygDdxRWoA/hqdefault.jpg)](https://www.youtube.com/watch?v=tNygDdxRWoA "點擊觀看完整影片")
 
 > 👆 點擊圖片觀看 YouTube 影片展示
 
 或是使用嵌入播放器：
 
-<div align="center">
-  <iframe width="100%" height="400" src="https://www.youtube.com/embed/tNygDdxRWoA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tNygDdxRWoA" title="LINE Bot 操作展示" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 </div>
 
 ### 主要功能一覽
