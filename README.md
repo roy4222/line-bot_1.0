@@ -6,9 +6,10 @@
 
 ### 操作展示影片
 
+[![操作展示影片](https://github.com/user-attachments/assets/ab293ea6-8aa8-4222-b2d2-57dd2f859e1a)](https://github.com/user-attachments/assets/ab293ea6-8aa8-4222-b2d2-57dd2f859e1a)
+
 <video width="100%" controls>
-  <source src="範例.mp4" type="video/mp4">
-  您的瀏覽器不支援影片播放。
+  <source src="https://github.com/user-attachments/assets/ab293ea6-8aa8-4222-b2d2-57dd2f859e1a" type="video/mp4">
 </video>
 
 ### 主要功能一覽
