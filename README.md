@@ -7,16 +7,12 @@
 ### 操作展示影片
 
 <div align="center">
-  
-[![操作展示影片](https://i3.ytimg.com/vi/tNygDdxRWoA/hqdefault.jpg)](https://www.youtube.com/watch?v=tNygDdxRWoA "點擊觀看完整影片")
-
-> 👆 點擊圖片觀看 YouTube 影片展示
-
-或是使用嵌入播放器：
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/tNygDdxRWoA" title="LINE Bot 操作展示" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
+  <video width="100%" controls>
+    <source src="https://github.com/roy4222/line-bot_1.0/assets/_.Clipchamp.2.mp4" type="video/mp4">
+  </video>
 </div>
+
+> 🎥 如果影片無法播放，可以[在 GitHub Issue 上觀看](https://github.com/roy4222/line-bot_1.0/issues/1#issue-2920191591)或是[前往 YouTube](https://www.youtube.com/watch?v=tNygDdxRWoA)
 
 ### 主要功能一覽
 
