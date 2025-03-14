@@ -8,7 +8,7 @@
 
 [![操作展示影片](https://github.com/user-attachments/assets/ab293ea6-8aa8-4222-b2d2-57dd2f859e1a)](https://github.com/user-attachments/assets/ab293ea6-8aa8-4222-b2d2-57dd2f859e1a)
 
-> 🎥 如果影片無法播放，可以[在 GitHub Issue 上觀看](https://github.com/roy4222/line-bot_1.0/issues/1#issue-2920191591)或是[前往 YouTube](https://www.youtube.com/watch?v=tNygDdxRWoA)
+> 🎥 如果影片無法播放或卡頓，可以[在 GitHub Issue 上觀看](https://github.com/roy4222/line-bot_1.0/issues/1#issue-2920191591)或是[前往 YouTube](https://www.youtube.com/watch?v=tNygDdxRWoA)
 
 ### 主要功能一覽
 
