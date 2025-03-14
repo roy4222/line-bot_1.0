@@ -2,43 +2,7 @@
 
 這是一個運行在 Cloudflare Workers 上的 LINE 聊天機器人，使用 Groq API 進行回應生成。
 
-## 部署步驟
 
-1. 安裝 Wrangler CLI:
-```bash
-npm install -g wrangler
-```
-
-2. 登入你的 Cloudflare 帳號:
-```bash
-wrangler login
-```
-
-3. 創建 KV namespace:
-```bash
-wrangler kv:namespace create "CHAT_HISTORY"
-```
-
-4. 更新 wrangler.toml 中的 KV namespace ID:
-將創建 KV namespace 後得到的 ID 填入 `wrangler.toml` 中的 `YOUR_KV_NAMESPACE_ID`。
-
-5. 設置環境變數:
-```bash
-wrangler secret put LINE_CHANNEL_ACCESS_TOKEN
-wrangler secret put LINE_CHANNEL_SECRET
-wrangler secret put GROQ_API_KEY
-```
-
-6. 部署 Worker:
-```bash
-wrangler deploy
-```
-
-7. 更新 LINE Bot 設定:
-- 登入 LINE Developers Console
-- 找到你的 Channel
-- 更新 Webhook URL 為你的 Worker URL
-- 開啟 "Use webhook"
 
 ## 功能說明
 
