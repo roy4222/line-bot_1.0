@@ -100,6 +100,93 @@ wrangler deploy
 - 是否考慮到使用者的個人特質和需求
 - 建議是否具體且容易執行
 
+## 系統架構圖
+
+```mermaid
+graph TB
+    subgraph LINE平台
+        LINE[LINE 用戶] --> |發送訊息| Webhook[LINE Webhook]
+    end
+    
+    subgraph Cloudflare_Workers
+        Webhook --> |觸發| Worker[Worker.js]
+        Worker --> |驗證| Auth[LINE 簽名驗證]
+        Worker --> |讀寫| KV[Cloudflare KV]
+        
+        subgraph 資料處理層
+            KV --> |讀取| History[對話歷史]
+            KV --> |讀寫| Settings[用戶設定]
+        end
+        
+        subgraph 業務邏輯層
+            Worker --> |生成回應| Groq[Groq API]
+            Worker --> |處理| Commands[指令處理]
+            Worker --> |管理| Modes[對話模式]
+        end
+    end
+    
+    Groq --> |回傳| Worker
+    Worker --> |回覆| LINE
+```
+
+## 資料流程圖
+
+```mermaid
+sequenceDiagram
+    participant U as 用戶
+    participant L as LINE平台
+    participant W as Worker
+    participant K as KV儲存
+    participant G as Groq API
+
+    U->>L: 發送訊息
+    L->>W: Webhook事件
+    W->>W: 驗證LINE簽名
+    W->>K: 讀取用戶設定
+    W->>K: 讀取對話歷史
+    
+    alt 特殊指令
+        W->>W: 處理指令
+        W->>K: 更新設定/清除歷史
+    else 一般對話
+        W->>G: 生成回應請求
+        G->>W: 回傳AI回應
+        W->>K: 儲存對話
+    end
+    
+    W->>L: 發送回覆
+    L->>U: 顯示回應
+```
+
+## 狀態管理
+
+```mermaid
+stateDiagram-v2
+    [*] --> 初始化
+    初始化 --> 待機
+    
+    state 對話模式 {
+        輕鬆模式
+        專業模式
+        幽默模式
+    }
+    
+    待機 --> 訊息處理: 收到訊息
+    訊息處理 --> 指令處理: 特殊指令
+    訊息處理 --> AI回應: 一般對話
+    
+    指令處理 --> 清除歷史
+    指令處理 --> 切換模式
+    指令處理 --> 顯示說明
+    
+    切換模式 --> 對話模式
+    
+    AI回應 --> 儲存對話
+    儲存對話 --> 待機
+    清除歷史 --> 待機
+    顯示說明 --> 待機
+```
+
 ## 使用技術
 
 - **Cloudflare Workers**: 無伺服器運算平台，用於部署和運行 LINE Bot
