@@ -6,11 +6,15 @@
 
 ### 操作展示影片
 
-[![操作展示影片](https://github.com/user-attachments/assets/ab293ea6-8aa8-4222-b2d2-57dd2f859e1a)](https://github.com/user-attachments/assets/ab293ea6-8aa8-4222-b2d2-57dd2f859e1a)
+[![操作展示影片](https://img.youtube.com/vi/tNygDdxRWoA/maxresdefault.jpg)](https://www.youtube.com/watch?v=tNygDdxRWoA)
 
-<video width="100%" controls>
-  <source src="https://github.com/user-attachments/assets/ab293ea6-8aa8-4222-b2d2-57dd2f859e1a" type="video/mp4">
-</video>
+> 👆 點擊圖片觀看 YouTube 影片展示
+
+或是使用嵌入播放器：
+
+<div align="center">
+  <iframe width="100%" height="400" src="https://www.youtube.com/embed/tNygDdxRWoA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### 主要功能一覽
 
